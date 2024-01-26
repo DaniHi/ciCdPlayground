@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/DaniHi/ciCdPlayground.git'
+                git branch: 'main', url: 'https://github.com/DaniHi/ciCdPlayground.git'
 
                 sh 'yarn'
                 sh 'yarn test'
